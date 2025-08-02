@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Srisanth's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      transition: background 0.3s, color 0.3s;
+    }
+    .light-mode {
+      background: white;
+      color: black;
+    }
+    header {
+      background-color: #000000;
+      padding: 30px;
+      text-align: center;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+    }
+    nav {
+      background: #1abc9c;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      background-color: rgba(255,255,255,0.2);
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #2c3e50;
+      text-align: center;
+      padding: 20px;
+      color: #bdc3c7;
+    }
+    #typed-text {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    button {
+      background-color: #16a085;
+      color: white;
+      cursor: pointer;
+    }
+    .resume-button {
+      background:#16a085;
+      color:white;
+      padding:10px 15px;
+      border-radius:5px;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:10px;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #34495e;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+.skills-section {
+  background-color: #1e3a58;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+.skills-section h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
+}
+.skills-desc {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #b0c4d4;
+  text-align: left;
+  margin-left: 20px;
+}
+.skill {
+  margin: 15px auto;
+  width: 80%;
+  max-width: 700px;
+  text-align: left;
+}
+.skill label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.bar {
+  width: 100%;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+}
+.progress {
+  background-color: #fcd1d1 ;
+  height: 100%;
+  color: white;
+  padding-left: 10px;
+  line-height: 25px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: right;
+  padding-right: 10px;
+}
+    .certification-heading {
+  font-size: 36px;
+  color:white;
+  margin-bottom: 30px;
+  font-weight: bold;
+
+}
+.certification-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
+  padding: 0 20px;
+}
+.certification-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  text-align: center;
+}
+.certification-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid #d8c4ff;
+  margin-bottom: 15px;
+}
+.certification-description {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+  </style>
+</head>
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+  <header>
+    <img src="sri.html..jpg" alt="Srisanth Profile" class="profile-pic" />
+    <h1>Welcome to my Portfolio</h1>
+    <p id="typed-text"></p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certification</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>As a passionate software developer, I thrive at the intersection of technology and creativity. Currently in my final year of B.Tech in Information Technology, I’m driven by a strong desire to solve real-world problems through innovative and scalable solutions.</p>
+      <p>With hands-on experience in Machine Learning, Data Analysis, and Frontend Development, I enjoy turning complex challenges into clean, efficient code and user-friendly applications.</p>
+      <p>My journey so far includes building predictive models, crafting interactive dashboards, and designing responsive web interfaces—all fueled by continuous learning and curiosity. I believe in writing code with purpose and designing with empathy. Whether it’s building smart algorithms or shaping seamless user experiences, I’m always ready to explore, experiment, and evolve as a developer in the fast-changing world of technology.</p>
+    </div>
+  </section>
+  <section class="academics" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="academic-cards">
+      <div class="card">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3><strong>Bachelor of Information Technology</strong></h3>
+        <p><em>Velammal College of Engineering and Technology, Madurai</em></p>
+        <div class="highlight">CGPA: <strong>8 / 10</strong></div>
+        <p>2023 - 2027 (Pre-final Year)</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-school"></i></div>
+        <h3><strong>Higher Secondary (12th)</strong></h3>
+        <p><em>Aknu S. Sundar Matric Hr. Sec</em></p>
+        <div class="highlight">Percentage: <strong>80%</strong></div>
+        <p>2022 - 2023</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fas fa-book-open"></i></div>
+        <h3><strong>Secondary (11th)</strong></h3>
+        <p><em>Aknu S. Sundar Matric Hr. Sec</em></p>
+        <div class="highlight">Percentage: <strong>85%</strong></div>
+        <p>2021 - 2022</p>
+      </div>
+    </div>
+  </section>
+ <section class="skills-section" id="skills">
+  <h2>Technical Skills</h2>
+  <p class="skills-desc">
+    Proficient in a wide array of technologies that enable the creation of responsive, scalable, and efficient software solutions.
+  </p>
+  <div class="skill">
+    <label>C++</label>
+    <div class="bar">
+      <div class="progress" style="width: 100%;">100%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <label>CSS</label>
+    <div class="bar">
+      <div class="progress" style="width: 80%;">80%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <label>Java</label>
+    <div class="bar">
+      <div class="progress" style="width: 70%;">70%</div>
+    </div>
+  </div>
+  <div class="skill">
+    <label>HTML</label>
+    <div class="bar">
+      <div class="progress" style="width: 75%;">75%</div>
+    </div>
+  </div>
+</section>
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <p><strong>WeightIQ:</strong> Smart weighing system using object recognition and IoT.</p>
+      <iframe src="Smartweighting.jpg" width="60%" height="300px" style="margin-top:10px;"></iframe>
+      <p class="card-description">
+        The Smart Weighing System integrates object recognition, weight measurement, and IoT connectivity to automate and enhance traditional weighing processes. This system uses computer vision to identify objects placed on the scale, verifies the type, and measures their weight. Data is then sent to the cloud or a mobile/web application via IoT for real-time monitoring and analysis.
+      </p>
+    </div>
+    <div class="card">
+      <p><strong>Sales Forecasting:</strong> Monthly Sales Forecasting using Artificial Intelligence.</p>
+      <iframe src="sales.jpg" width="80%" height="300px" style="margin-top:10px;"></iframe>
+      <p class="card-description">
+        The Monthly Sales Forecasting project aims to predict future sales for a company or product using historical sales data and machine learning techniques. Accurate forecasting enables businesses to optimize inventory management, plan marketing strategies, and make informed financial decisions. By analyzing past trends, seasonality, and other influencing factors, the system provides monthly sales predictions with improved accuracy and reliability.
+      </p>
+    </div>
+  </section>
+  <section id="certifications">
+    <h1 class="certification-heading" style="text-align: left; margin-left: 20px;">Certification</h1>
+    <div class="certification-row">
+      <div class="certification-content">
+        <img src="sql.jpg" alt="SQL Certificate" class="certification-image">
+        <p class="certification-description">
+          I have completed SQL (Basics) in HackerRank, where I learned SQL queries and gained insights into how data is organized to minimize redundancy.
+        </p>
+      </div>
+      <div class="certification-content">
+        <img src="yugam.jpg" alt="Coding Competition" class="certification-image">
+        <p class="certification-description">
+          I participated in Code2Duo, where I enhanced my ability to think critically and solve problems under time constraints, sharpening my logical and analytical thinking.
+        </p>
+      </div>
+      <div class="certification-content">
+        <img src="data.jpg" alt="Data Science Certificate" class="certification-image">
+        <p class="certification-description">
+          I successfully completed a course in Data Science and Analytics, where I gained hands-on experience in extracting insights from data, building predictive models, and using data to support business decisions.
+        </p>
+      </div>
+    </div>
+</section>
+  <section id="contact">
+    <div class="card">
+      <h2>Contact</h2>
+      <p><strong>📞 Phone:</strong> 6381380904</p>
+      <p><strong>📧 Email:</strong> sris10204@gmail.com</p>
+      <a href="https://www.linkedin.com/in/srisanth-official-71462529b" target="_blank">LinkedIn Profile</a>
+      <p><strong>📍 Address:</strong> 22/1 Illangupatti, Othakadai, Madurai - 107</p>
+      <a href="resume.pdf" class="resume-button" download>Download Resume</a>
+      <form action="mailto:sris10204@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <textarea name="Message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 SRISANTH. All rights reserved.</p>
+  </footer>
+  <script>
+    const text = "Information Technology Student | Programmer | IoT Enthusiast";
+    let i = 0;
+    const speed = 80;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typed-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    typeWriter();
+    function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</body>
+</html>
